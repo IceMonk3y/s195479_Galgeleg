@@ -1,5 +1,7 @@
 package com.example.galgeleg_s195479;
 
+import com.example.galgeleg_s195479.logik.Galgelogik;
+
 public class BenytGalgelogik {
 
   public static void main(String[] args) {
