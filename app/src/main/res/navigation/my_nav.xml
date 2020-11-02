@@ -8,5 +8,56 @@
         android:id="@+id/mainMenuFrag"
         android:name="com.example.galgeleg_s195479.view.mainMenuFrag"
         android:label="fragment_main_menu"
-        tools:layout="@layout/main_menu" />
+        tools:layout="@layout/main_menu" >
+        <action
+            android:id="@+id/action_mainMenuFrag_to_newGameFrag"
+            app:destination="@id/newGameFrag" />
+        <action
+            android:id="@+id/action_mainMenuFrag_to_highscoreFrag"
+            app:destination="@id/highscoreFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGameFrag"
+        android:name="com.example.galgeleg_s195479.view.NewGameFrag"
+        android:label="new_game"
+        tools:layout="@layout/new_game" >
+        <action
+            android:id="@+id/action_newGameFrag_to_gameFrag"
+            app:destination="@id/gameFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/highscoreFrag"
+        android:name="com.example.galgeleg_s195479.view.HighscoreFrag"
+        android:label="highscore"
+        tools:layout="@layout/highscore" />
+    <fragment
+        android:id="@+id/wonFrag"
+        android:name="com.example.galgeleg_s195479.view.WonFrag"
+        android:label="won"
+        tools:layout="@layout/won" >
+        <action
+            android:id="@+id/action_wonFrag_to_mainMenuFrag"
+            app:destination="@id/mainMenuFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFrag"
+        android:name="com.example.galgeleg_s195479.view.GameFrag"
+        android:label="game"
+        tools:layout="@layout/game" >
+        <action
+            android:id="@+id/action_gameFrag_to_wonFrag"
+            app:destination="@id/wonFrag" />
+        <action
+            android:id="@+id/action_gameFrag_to_lostFrag"
+            app:destination="@id/lostFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/lostFrag"
+        android:name="com.example.galgeleg_s195479.view.lostFrag"
+        android:label="lost"
+        tools:layout="@layout/lost" >
+        <action
+            android:id="@+id/action_lostFrag_to_mainMenuFrag"
+            app:destination="@id/mainMenuFrag" />
+    </fragment>
 </navigation>
