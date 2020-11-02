@@ -21,7 +21,7 @@ import com.example.galgeleg_s195479.logik.Galgelogik;
 import org.w3c.dom.Text;
 
 public class NewGameFrag extends Fragment {
-    private Galgelogik gl = new Galgelogik();
+    private Galgelogik gl = Galgelogik.getInstance();
 
     @Nullable
     @Override
@@ -48,7 +48,6 @@ public class NewGameFrag extends Fragment {
                 }
                 else{
                     gl.setName(name);
-                    gl.nulstil();
                     Navigation.findNavController(v).navigate(R.id.action_GAME);
                 }
             }
