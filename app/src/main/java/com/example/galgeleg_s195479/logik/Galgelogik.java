@@ -19,6 +19,8 @@ public class Galgelogik {
   private boolean sidsteBogstavVarKorrekt;
   private boolean spilletErVundet;
   private boolean spilletErTabt;
+  private String name;  // Ekstra variabel til at håndtere navne til highscore listen.
+  private static Galgelogik instance = null; // Statisk variabel til at holde styr på den rigtige instans.
 
   public Galgelogik() {
     muligeOrd.add("bil");
@@ -32,7 +34,6 @@ public class Galgelogik {
     muligeOrd.add("nitten");
     nulstil();
   }
-
 
   public ArrayList<String> getBrugteBogstaver() {
     return brugteBogstaver;
@@ -66,6 +67,12 @@ public class Galgelogik {
     return spilletErTabt || spilletErVundet;
   }
 
+  // Setter og getter til name:
+
+  public String getName() { return name; }
+
+  public void setName(String name) { this.name = name; }
+
 
   public void nulstil() {
     brugteBogstaver.clear();
@@ -75,6 +82,13 @@ public class Galgelogik {
     if (muligeOrd.isEmpty()) throw new IllegalStateException("Listen over ord er tom!");
     ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
     opdaterSynligtOrd();
+  }
+
+  public static Galgelogik getInstance(){
+    if(instance == null){
+      instance = new Galgelogik();
+    }
+    return instance;
   }
 
 

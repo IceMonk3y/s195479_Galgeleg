@@ -1,66 +1,59 @@
 package com.example.galgeleg_s195479.view;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.galgeleg_s195479.R;
+import com.example.galgeleg_s195479.logik.Galgelogik;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link NewGameFrag#newInstance} factory method to
- * create an instance of this fragment.
- */
+import org.w3c.dom.Text;
+
 public class NewGameFrag extends Fragment {
+    private Galgelogik gl = new Galgelogik();
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public NewGameFrag() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment NewGameFrag.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static NewGameFrag newInstance(String param1, String param2) {
-        NewGameFrag fragment = new NewGameFrag();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.new_game, container, false);
+        View root = inflater.inflate(R.layout.new_game, container, false);
+
+        final TextView nameTe = root.findViewById(R.id.chooseTextName);
+        Button start = root.findViewById(R.id.buttonStart);
+
+        nameTe.setText(gl.getName());
+
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name =nameTe.getText().toString();
+
+                if (name.length() < 1){
+                    Context context = v.getContext();
+                    CharSequence text = "Indtast dit navn";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
+                }
+                else{
+                    gl.setName(name);
+                    gl.nulstil();
+                    Navigation.findNavController(v).navigate(R.id.action_GAME);
+                }
+            }
+        });
+
+        return root;
     }
 }

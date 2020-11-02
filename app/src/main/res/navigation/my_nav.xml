@@ -22,7 +22,7 @@
         android:label="new_game"
         tools:layout="@layout/new_game" >
         <action
-            android:id="@+id/action_newGameFrag_to_gameFrag"
+            android:id="@+id/action_GAME"
             app:destination="@id/gameFrag" />
     </fragment>
     <fragment
@@ -44,6 +44,9 @@
         android:name="com.example.galgeleg_s195479.view.GameFrag"
         android:label="game"
         tools:layout="@layout/game" >
+        <argument android:name="username"
+            android:defaultValue="None"/>
+
         <action
             android:id="@+id/action_gameFrag_to_wonFrag"
             app:destination="@id/wonFrag" />
