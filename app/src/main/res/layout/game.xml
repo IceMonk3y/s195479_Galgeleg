@@ -28,7 +28,7 @@
             android:src="@drawable/galge" />
 
         <TextView
-            android:id="@+id/textViewGeussAwnser"
+            android:id="@+id/textViewGeusses"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"

@@ -53,6 +53,8 @@ public class NewGameFrag extends Fragment {
             }
         });
 
+        // Todo : Load words i baggrund : HOW?
+
         return root;
     }
 }

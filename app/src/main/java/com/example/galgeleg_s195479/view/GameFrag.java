@@ -21,6 +21,8 @@ import org.w3c.dom.Text;
 
 public class GameFrag extends Fragment {
     private Galgelogik gl = Galgelogik.getInstance();
+    private TextView currentgeusses;
+    private Button a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v1, w, x, y, z, æ, ø, å;
 
     @Nullable
     @Override
@@ -30,18 +32,21 @@ public class GameFrag extends Fragment {
         TextView welcomeUser = root.findViewById(R.id.textViewWelcomeUser);
         welcomeUser.setText(String.format("%s","Velkommen " + gl.getName() ));
 
+        imageUpd(root);
+        listenButton(root);
+        buttonUpd(root);
+        currentgeusses = container.findViewById(R.id.textViewGeusses);
+        currentgeusses.setText(gl.getSynligtOrd());
 
-        /*Update Image
-        *Initialize buttons (gør grå/ usynlig)
-        *Update (samme?)
-        *Update text
-        * Skriv toast.
+        /*
+        * Todo : Skriv toast.
         * */
+
         return root;
     }
 
 
-    private void Image(View v){
+    private void imageUpd(View v){
         ImageView imgV =v.findViewById(R.id.imageViewHang);
         switch (gl.getAntalForkerteBogstaver()){
             default:
@@ -254,9 +259,98 @@ public class GameFrag extends Fragment {
         if (gl.erSpilletVundet()){
             Navigation.findNavController(v).navigate(R.id.action_gameFrag_to_wonFrag);
         }
-        /*currLetters.setText(gl.getSynligtOrd());
-        showToaster();
-        updateImage(v);
-        updateButtons(v);*/
+        currentgeusses.setText(gl.getSynligtOrd());
+        imageUpd(v);
+        buttonUpd(v);
   }
-}
+
+  private void buttonUpd(View v){
+      if(gl.getBrugteBogstaver().contains("a")){
+          a.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("b")){
+          b.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("c")){
+          c.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("d")){
+          d.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("e")){
+          e.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("f")){
+          f.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("g")){
+          g.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("h")){
+          h.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("i")){
+          i.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("j")){
+          j.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("k")){
+          k.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("l")){
+          l.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("m")){
+          m.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("n")){
+          n.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("o")){
+          o.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("p")){
+          p.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("q")){
+          q.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("r")){
+          r.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("s")){
+          s.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("t")){
+          t.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("u")){
+          u.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("v")) {
+          v1.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("w")){
+          w.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("x")){
+          x.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("y")){
+          y.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("z")){
+          z.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("æ")){
+          æ.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("ø")){
+          ø.setVisibility(View.INVISIBLE);
+      }
+      if(gl.getBrugteBogstaver().contains("å")){
+          å.setVisibility(View.INVISIBLE);
+      }
+  }
+  }
