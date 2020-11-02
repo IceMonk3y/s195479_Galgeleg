@@ -16,14 +16,14 @@
             android:id="@+id/main_newGameButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10px"
+            android:layout_margin="10dp"
             android:text="Nyt spil" />
 
         <Button
             android:id="@+id/main_highscoreButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10px"
+            android:layout_margin="10dp"
             android:text="Highscore liste" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

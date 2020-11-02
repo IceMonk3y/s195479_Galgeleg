@@ -6,14 +6,14 @@
     app:startDestination="@id/mainMenuFrag">
     <fragment
         android:id="@+id/mainMenuFrag"
-        android:name="com.example.galgeleg_s195479.view.mainMenuFrag"
+        android:name="com.example.galgeleg_s195479.view.MainMenuFrag"
         android:label="fragment_main_menu"
         tools:layout="@layout/main_menu" >
         <action
-            android:id="@+id/action_mainMenuFrag_to_newGameFrag"
+            android:id="@+id/action_startNewGame"
             app:destination="@id/newGameFrag" />
         <action
-            android:id="@+id/action_mainMenuFrag_to_highscoreFrag"
+            android:id="@+id/action_openHighscore"
             app:destination="@id/highscoreFrag" />
     </fragment>
     <fragment
@@ -53,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/lostFrag"
-        android:name="com.example.galgeleg_s195479.view.lostFrag"
+        android:name="com.example.galgeleg_s195479.view.LostFrag"
         android:label="lost"
         tools:layout="@layout/lost" >
         <action

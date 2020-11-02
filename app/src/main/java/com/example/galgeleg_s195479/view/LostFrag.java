@@ -12,10 +12,10 @@ import com.example.galgeleg_s195479.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link lostFrag#newInstance} factory method to
+ * Use the {@link LostFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class lostFrag extends Fragment {
+public class LostFrag extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class lostFrag extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public lostFrag() {
+    public LostFrag() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class lostFrag extends Fragment {
      * @return A new instance of fragment lostFrag.
      */
     // TODO: Rename and change types and number of parameters
-    public static lostFrag newInstance(String param1, String param2) {
-        lostFrag fragment = new lostFrag();
+    public static LostFrag newInstance(String param1, String param2) {
+        LostFrag fragment = new LostFrag();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

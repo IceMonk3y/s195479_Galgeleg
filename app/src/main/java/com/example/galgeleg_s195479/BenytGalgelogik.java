@@ -1,3 +1,4 @@
+/*
 package com.example.galgeleg_s195479;
 
 import com.example.galgeleg_s195479.logik.Galgelogik;
@@ -9,22 +10,26 @@ public class BenytGalgelogik {
     Galgelogik spil = new Galgelogik();
     spil.nulstil();
     // Kommentér ind for at hente ord fra DR
-    /*
+    */
+/*
     try {
       spil.hentOrdFraDr();
     } catch (Exception e) {
       e.printStackTrace();
     }
-    */
+    *//*
+
 
     // Kommentér ind for at hente ord fra et online regneark
-    /*
+    */
+/*
     try {
       spil.hentOrdFraRegneark("12");
     } catch (Exception e) {
       e.printStackTrace();
     }
-    */
+    *//*
+
     spil.logStatus();
 
     spil.gætBogstav("e");
@@ -85,3 +90,4 @@ public class BenytGalgelogik {
     if (spil.erSpilletSlut()) return;
   }
 }
+*/
