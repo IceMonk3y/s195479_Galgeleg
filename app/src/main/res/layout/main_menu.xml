@@ -13,14 +13,14 @@
         tools:layout_editor_absoluteY="1dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/main_newGameButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
             android:text="Nyt spil" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/main_highscoreButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
