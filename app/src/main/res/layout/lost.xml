@@ -41,8 +41,6 @@
             android:textStyle="bold" />
 
 
-
-
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +51,7 @@
             android:id="@+id/buttonL_NewGame"
             android:layout_width="217dp"
             android:layout_height="78dp"
-            android:layout_marginTop="476dp"
+            android:layout_marginTop="480dp"
             android:text="Spil igen"
             android:textAlignment="center"
             android:textSize="18sp"
@@ -62,4 +60,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
