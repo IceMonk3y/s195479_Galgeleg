@@ -39,7 +39,6 @@ public class GameFrag extends Fragment {
         currentgeusses = root.findViewById(R.id.textViewGeusses);
         currentgeusses.setText(gl.getSynligtOrd());
 
-
         /*
         * Todo : Skriv toast.
         * */

@@ -22,12 +22,15 @@ public class WonFrag extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.lost, container, false);
+        View root = inflater.inflate(R.layout.won, container, false);
 
         TextView amountTries = root.findViewById(R.id.textViewAmountTries);
         Button newGame = root.findViewById(R.id.buttonW_NewGame);
 
-        String mes = "Du gættede kun " + gl.getAntalForkerteBogstaver() + " gange forkert";
+
+         String mes = "Du gættede " + gl.getAntalForkerteBogstaver() + " gange forkert";
+
+        System.out.println(amountTries);
 
         amountTries.setText(mes);
 
