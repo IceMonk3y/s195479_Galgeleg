@@ -18,8 +18,6 @@ import android.widget.TextView;
 import com.example.galgeleg_s195479.R;
 import com.example.galgeleg_s195479.logik.Galgelogik;
 
-import org.w3c.dom.Text;
-
 public class GameFrag extends Fragment {
     private Galgelogik gl = Galgelogik.getInstance();
     private TextView currentgeusses;
@@ -68,9 +66,6 @@ public class GameFrag extends Fragment {
                 break;
             case 5:
                 imgV.setImageResource(R.drawable.forkert5);
-                break;
-            case 6:
-                imgV.setImageResource(R.drawable.forkert6);
                 break;
         }
     }
@@ -253,10 +248,10 @@ public class GameFrag extends Fragment {
     private  void checkLetter(View v,String letter){
         gl.gætBogstav(letter);
         if (gl.erSpilletTabt()){
-            Navigation.findNavController(v).navigate(R.id.action_gameFrag_to_lostFrag);
+            Navigation.findNavController(v).navigate(R.id.action_you_lost);
         }
         if (gl.erSpilletVundet()){
-            Navigation.findNavController(v).navigate(R.id.action_gameFrag_to_wonFrag);
+            Navigation.findNavController(v).navigate(R.id.action_you_won);
         }
         currentgeusses.setText(gl.getSynligtOrd());
         imageUpd(v);

@@ -36,7 +36,7 @@
         android:label="won"
         tools:layout="@layout/won" >
         <action
-            android:id="@+id/action_wonFrag_to_mainMenuFrag"
+            android:id="@+id/action_restartGame_w"
             app:destination="@id/mainMenuFrag" />
     </fragment>
     <fragment
@@ -48,10 +48,10 @@
             android:defaultValue="None"/>
 
         <action
-            android:id="@+id/action_gameFrag_to_wonFrag"
+            android:id="@+id/action_you_won"
             app:destination="@id/wonFrag" />
         <action
-            android:id="@+id/action_gameFrag_to_lostFrag"
+            android:id="@+id/action_you_lost"
             app:destination="@id/lostFrag" />
     </fragment>
     <fragment
@@ -60,7 +60,7 @@
         android:label="lost"
         tools:layout="@layout/lost" >
         <action
-            android:id="@+id/action_lostFrag_to_mainMenuFrag"
+            android:id="@+id/action_restartGame_L"
             app:destination="@id/mainMenuFrag" />
     </fragment>
 </navigation>
