@@ -20,6 +20,8 @@ public class HighscorePrefManager implements IHighscorePref {
         SharedPreferences share = act.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = share.edit();
         edit.putInt(highscore.getName(), highscore.getScore());
+        System.out.println(highscore.getName());
+        System.out.println(highscore.getScore());
     }
 
     @Override

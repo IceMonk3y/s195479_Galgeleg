@@ -11,10 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.galgeleg_s195479.R;
+import com.example.galgeleg_s195479.data.HighscorePrefManager;
+import com.example.galgeleg_s195479.data.IHighscorePref;
 import com.example.galgeleg_s195479.logik.Galgelogik;
 
 public class HighscoreFrag extends Fragment {
     private Galgelogik gl = Galgelogik.getInstance();
+    private IHighscorePref IHighscorePref;
 
     @Nullable
     @Override
