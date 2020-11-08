@@ -24,6 +24,7 @@ public class HighscorePrefManager implements IHighscorePref {
         System.out.println(highscore.getScore());
     }
 
+
     @Override
     public List<Highscore> getScore() {
         SharedPreferences sharedPref = act.getPreferences(Context.MODE_PRIVATE);
