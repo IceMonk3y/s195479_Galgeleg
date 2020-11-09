@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.example.galgeleg_s195479.R;
 import com.example.galgeleg_s195479.logik.DROrdlogik;
 import com.example.galgeleg_s195479.logik.ExelOrdlogik;
+import com.example.galgeleg_s195479.logik.FactoryOrdHenter;
 import com.example.galgeleg_s195479.logik.Galgelogik;
 
 import org.w3c.dom.Text;
@@ -60,7 +61,8 @@ public class NewGameFrag extends Fragment {
                     gl.nulstil();
                     bgThread.execute(()-> {
                         try {
-                            gl.setOrdhenter(new DROrdlogik());
+                            FactoryOrdHenter factory = new FactoryOrdHenter();
+                            gl.setOrdhenter(factory.lavOrdHenter("Dr"));
                             gl.hentOrd();
                             frThread.post(()->{
                                 Navigation.findNavController(v).navigate(R.id.action_GAME);
