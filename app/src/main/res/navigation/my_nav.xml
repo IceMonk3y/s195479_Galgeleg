@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_GAME"
             app:destination="@id/gameFrag" />
+        <argument
+            android:name="wordSource"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/highscoreFrag"

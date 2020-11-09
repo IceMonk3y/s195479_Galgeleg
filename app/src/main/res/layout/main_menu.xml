@@ -10,15 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="67dp">
 
         <TextView
             android:id="@+id/main_textView_vælg_ord"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vælg hvor ordene skal hents fra :"
             android:layout_margin="10sp"
+            android:text="Vælg hvor ordene skal hents fra :"
             android:textSize="16sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,26 +29,26 @@
                 android:id="@+id/main_textView_Ord_Location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:text="Spillets ord hentes fra x"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="132dp"
+                android:text="Dr.dk"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.107"
-                app:layout_constraintStart_toEndOf="@+id/main_skift_ord"
+                app:layout_constraintHorizontal_bias="0.987"
+                app:layout_constraintStart_toEndOf="@+id/main_skift_ord_btn"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/main_skift_ord"
+                android:id="@+id/main_skift_ord_btn"
                 android:layout_width="82dp"
                 android:layout_height="42dp"
                 android:text="Skift"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.218"
+                app:layout_constraintHorizontal_bias="0.395"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.492" />
+                app:layout_constraintVertical_bias="0.476" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

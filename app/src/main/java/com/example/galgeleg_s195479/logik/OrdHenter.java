@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-abstract class OrdHenter {
+abstract class OrdHenter{
 
     public static String hentUrl(String url) throws IOException {
         System.out.println("Henter data fra " + url);

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,10 +34,11 @@ public class NewGameFrag extends Fragment {
     private Galgelogik gl = Galgelogik.getInstance();
     Executor bgThread = Executors.newSingleThreadExecutor();
     Handler frThread = new Handler();
+    String sourceString;
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, final Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.new_game, container, false);
 
@@ -62,7 +64,7 @@ public class NewGameFrag extends Fragment {
                     bgThread.execute(()-> {
                         try {
                             FactoryOrdHenter factory = new FactoryOrdHenter();
-                            gl.setOrdhenter(factory.lavOrdHenter("Dr"));
+                            gl.setOrdhenter(factory.lavOrdHenter(sourceString));
                             gl.hentOrd();
                             frThread.post(()->{
                                 Navigation.findNavController(v).navigate(R.id.action_GAME);
@@ -76,4 +78,13 @@ public class NewGameFrag extends Fragment {
         });
         return root;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @NonNull Bundle savedInstanceState ){
+        super.onViewCreated(view, savedInstanceState);
+        NewGameFragArgs args = NewGameFragArgs.fromBundle(getArguments());
+        sourceString = args.getWordSource();
+        Log.d("text" , sourceString);
+    }
+
 }
