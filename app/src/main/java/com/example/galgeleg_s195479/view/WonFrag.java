@@ -1,5 +1,6 @@
 package com.example.galgeleg_s195479.view;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,10 @@ import com.example.galgeleg_s195479.data.HighscorePrefManager;
 import com.example.galgeleg_s195479.data.IHighscorePref;
 import com.example.galgeleg_s195479.logik.Galgelogik;
 
+import nl.dionsegijn.konfetti.KonfettiView;
+import nl.dionsegijn.konfetti.models.Shape;
+import nl.dionsegijn.konfetti.models.Size;
+
 public class WonFrag extends Fragment {
     private Galgelogik gl = Galgelogik.getInstance();
     private IHighscorePref IHighscorePref;
@@ -27,6 +32,24 @@ public class WonFrag extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.won, container, false);
+
+        // PT. fejl med confetti.
+        /*final KonfettiView konfettiView = root.findViewById(R.id.viewKonfetti);
+        konfettiView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                konfettiView.build()
+                        .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                        .setDirection(0.0, 359.0)
+                        .setSpeed(1f, 5f)
+                        .setFadeOutEnabled(true)
+                        .setTimeToLive(2000L)
+                        .addShapes(Shape.Square.INSTANCE, Shape.Circle.INSTANCE)
+                        .addSizes(new Size(12, 5f))
+                        .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
+                        .streamFor(300, 5000L);
+            }
+        });*/
 
         // Saved win to highscore-list:
         IHighscorePref = new HighscorePrefManager(this.getActivity());
@@ -51,5 +74,8 @@ public class WonFrag extends Fragment {
         });
         return root;
     }
+
+
+
 
 }

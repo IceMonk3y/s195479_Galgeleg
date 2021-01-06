@@ -45,6 +45,7 @@ public class NewGameFrag extends Fragment {
         final TextView nameTe = root.findViewById(R.id.chooseTextName);
         final Button start = root.findViewById(R.id.buttonStart);
 
+        // todo : evt gem sidste navn i sharedPreference.
         nameTe.setText(gl.getName());
 
         start.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +53,7 @@ public class NewGameFrag extends Fragment {
             public void onClick(View v) {
                 String name = nameTe.getText().toString();
 
+                // todo toast virker ikke?
                 if (name.length() < 1) {
                     Context context = v.getContext();
                     CharSequence text = "Indtast dit navn";

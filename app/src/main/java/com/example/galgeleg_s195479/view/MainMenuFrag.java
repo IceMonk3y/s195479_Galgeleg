@@ -63,15 +63,6 @@ public class MainMenuFrag extends Fragment {
             }
         });
 
-        // Todo: Undersøg hvornår nedenståeende er nødvendigt - hvis det er?
-
-       /* OnBackPressedCallback callback = new OnBackPressedCallback(true *//* enabled by default *//*) {
-            @Override
-            public void handleOnBackPressed() {
-                getActivity().finish();
-            }
-        };
-        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);*/
         return root;
     }
 

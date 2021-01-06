@@ -20,9 +20,10 @@ public class HighscorePrefManager implements IHighscorePref {
     public void saveScore(Highscore highscore) {
         SharedPreferences share = act.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = share.edit();
-        //edit.putString("name",highscore.getName());
-       // edit.putInt("score",highscore.getScore());
-        edit.putInt(highscore.getName(), highscore.getScore());
+        edit.putString("name",highscore.getName());
+        edit.putInt("score",highscore.getScore());
+
+        edit.putInt(highscore.getName(),highscore.getScore());
 
         System.out.println(highscore.getName());
         System.out.println(highscore.getScore());
@@ -36,7 +37,6 @@ public class HighscorePrefManager implements IHighscorePref {
 
         Map<String, ?> mapKey = sharedPref.getAll();
         for (Map.Entry<String,?> entry : mapKey.entrySet()) {
-
             Highscore list = new Highscore(Integer.parseInt(entry.getValue().toString()), entry.getKey());
             highscoreList.add(list);
         }
