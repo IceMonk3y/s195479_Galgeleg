@@ -1,6 +1,7 @@
 package com.example.galgeleg_s195479.view;
 
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +34,8 @@ public class WonFrag extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.won, container, false);
+        MediaPlayer player = MediaPlayer.create(getContext(),R.raw.kidscheering);
+        player.start();
 
         // PT. fejl med confetti.
         /*final KonfettiView konfettiView = root.findViewById(R.id.viewKonfetti);

@@ -15,8 +15,10 @@
             android:id="@+id/textViewEnterName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Indtast navn" />
+            android:layout_marginTop="15dp"
+            android:text="Indtast navn"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/chooseTextName"
@@ -24,13 +26,16 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Spillernavn" />
+            android:text="Spillernavn"
+            android:textColor="@android:color/black" />
 
         <Button
             android:id="@+id/buttonStart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Start" />
+            android:text="Start"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
     </LinearLayout>
 </FrameLayout>

@@ -1,5 +1,6 @@
 package com.example.galgeleg_s195479.view;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,13 +18,15 @@ import com.example.galgeleg_s195479.R;
 import com.example.galgeleg_s195479.logik.Galgelogik;
 
 
-public class LostFrag extends Fragment {
+public class LostFrag extends  Fragment {
     private Galgelogik gl = Galgelogik.getInstance();
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.lost, container, false);
+        MediaPlayer player = MediaPlayer.create(getContext(),R.raw.losesound);
+        player.start();
 
         TextView rightWordMes = root.findViewById(R.id.textViewRightWord);
         Button newGame = root.findViewById(R.id.buttonL_NewGame);
