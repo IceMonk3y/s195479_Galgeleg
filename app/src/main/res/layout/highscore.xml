@@ -14,18 +14,19 @@
             android:id="@+id/textViewHighscore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Wins"
+            android:text="HighScore"
             android:textAlignment="center"
+            android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textViewEkstra"
-            android:textAlignment="center"
-            android:textColor="#ED2F21"
-            android:text="Denne funktionalitet nåede ikke at blive udviklet."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Se dit bedste spil her:"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
             android:textStyle="bold" />
 
         <ListView
