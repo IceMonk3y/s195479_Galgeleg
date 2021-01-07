@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.HighscoreFrag">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
 
         <TextView
             android:id="@+id/textViewHighscore"
@@ -26,15 +25,26 @@
             android:id="@+id/textViewEkstra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Se dit bedste spil her:"
+            android:layout_margin="20dp"
+            android:text="Out of order - the feautre returns when corona is gone"
             android:textAlignment="center"
             android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:textStyle="bold|italic" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+            app:lottie_rawRes="@raw/workingfromhome"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
 
         <ListView
             android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="407dp" />
+            android:layout_height="336dp" />
 
     </LinearLayout>
 </FrameLayout>

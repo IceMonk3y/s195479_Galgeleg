@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">s195479_Simon Fridolf_Galgeleg</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="createDropDown">
+        <item>Dr.dk</item>
+        <item>Excel</item>
+
+    </string-array>
+
 </resources>
