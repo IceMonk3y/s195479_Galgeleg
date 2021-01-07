@@ -29,10 +29,8 @@ public class MainMenuFrag extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
         View root = inflater.inflate(R.layout.main_menu, container, false);
 
-       // Button shiftButton = root.findViewById(R.id.main_skift_ord_btn);
         Button newGameButton = root.findViewById(R.id.main_newGameButton);
         Button highscoreButton = root.findViewById(R.id.main_highscoreButton);
         Spinner dropDown = root.findViewById(R.id.create_dropDown);
@@ -44,7 +42,6 @@ public class MainMenuFrag extends Fragment {
         dropDown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // An item was selected. You can retrieve the selected item using
                 //set the newly selected type to local string
                  from = parent.getItemAtPosition(position).toString();
             }
@@ -56,25 +53,9 @@ public class MainMenuFrag extends Fragment {
 
 
 
-       // TextView wordSource = root.findViewById(R.id.main_textView_Ord_Location);
-
-       /* shiftButton.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View v) {
-                if (wordSource.getText().toString().equals("Dr.dk")){
-                    wordSource.setText("Excel");
-                }
-                else if (wordSource.getText().toString().equals("Excel")){
-                    wordSource.setText("Dr.dk");
-                }
-            }
-        });*/
-
         newGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String text = wordSource.getText().toString();
                 MainMenuFragDirections.ActionStartNewGame action = MainMenuFragDirections.actionStartNewGame(from);
                 Navigation.findNavController(v).navigate(action);
             }
